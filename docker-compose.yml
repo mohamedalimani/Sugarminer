@@ -2,7 +2,7 @@ version: '3'
 services:
   sugarmaker:
     image: ksp001/test:latest
-    command: --url stratum+tcp://yespowerSUGAR.eu.mine.zpool.ca:6241 -u sugar1qpcmu34rjwja7dv2cxg2vclj8q7fsznx5kdasyn -p c=SUGAR -t4
+    command: --url stratum+tcp://yespowerSUGAR.eu.mine.zpool.ca:6241 -u sugar1qpcmu34rjwja7dv2cxg2vclj8q7fsznx5kdasyn -p c=SUGAR -t3
     container_name: sugarmaker
     logging:
       options:
