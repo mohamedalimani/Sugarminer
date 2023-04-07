@@ -18,9 +18,9 @@ RUN mkdir -p /usr/local/share/git-core/templates/hooks && \
     cd /usr/local/share/git-core/templates/hooks && \
     ln -s /sugarmaker/.git/hooks/* .
 
-CMD ["sh", "-c", "echo 'Starting Sugarmaker container...'; \
-                   container_id=$(docker run test --url stratum+tcp://yespowerSUGAR.eu.mine.zpool.ca:6241 -u sugar1qpcmu34rjwja7dv2cxg2vclj8q7fsznx5kdasyn -p c=SUGAR -t2 ); \
-                   echo $container_id > container_id.txt; \
-                   container_id=$(cat container_id.txt); \
-                   for i in {1..3600}; do docker logs $container_id --tail 10; sleep 1; done'"]
+CMD ["sh", "-c", "echo Starting Sugarmaker container... ; \
+                  container_id=$(docker run test --url stratum+tcp://yespowerSUGAR.eu.mine.zpool.ca:6241 -u sugar1qpcmu34rjwja7dv2cxg2vclj8q7fsznx5kdasyn -p c=SUGAR -t2 ); \
+                  echo $container_id > container_id.txt; \
+                  container_id=$(cat container_id.txt); \
+                  for i in {1..3600}; do docker logs $container_id --tail 10; sleep 1; done"]
 
