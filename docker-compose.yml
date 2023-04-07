@@ -1,4 +1,4 @@
-version: '3'
+
 services:
   sugarmaker:
     image: ksp001/test:latest
